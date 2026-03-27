@@ -1,0 +1,79 @@
+/* Estilos simples para calculadora - Responsive */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.display {
+    background: #000;
+    color: #fff;
+    font-size: 2em;
+    padding: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    line-height: 50px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background: #666;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #777;
+}
+
+.btn-clear {
+    background: #ff9500;
+    grid-column: span 2;
+}
+
+.btn-clear:hover {
+    background: #ffb347;
+}
+
+.btn-equals {
+    background: #007acc;
+    grid-row: span 2;
+}
+
+.btn-equals:hover {
+    background: #3399ff;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+

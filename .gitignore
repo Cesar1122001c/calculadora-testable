@@ -1,0 +1,9 @@
+**/.mvn
+**/mvnw
+**/mvnw.cmd
+**/.idea
+**/target/
+**/selenium-tests/__pycache__
+node_modules/
+.DS_Store
+
