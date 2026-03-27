@@ -2,13 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
+from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.firefox.service import Service
 import time
 
 def test_calculator_operations():
     options = Options()
-    options.add_experimental_option("detach", True)
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
     
     driver.get("file:///C:/Users/cesar/Desktop/calculadora-testable/web/index.html")
     wait = WebDriverWait(driver, 10)
